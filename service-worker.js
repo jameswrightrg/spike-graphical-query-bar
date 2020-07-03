@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/spike-graphical-query-bar/precache-manifest.135b4a62d0b811790a41e6bc9efa722c.js"
+  "/spike-graphical-query-bar/precache-manifest.dd51bc032c16874c9405dac799a73ad7.js"
 );
 
 self.addEventListener('message', (event) => {
