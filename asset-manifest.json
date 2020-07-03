@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/spike-graphical-query-bar/static/css/main.5f361e03.chunk.css",
+    "main.js": "/spike-graphical-query-bar/static/js/main.b655160e.chunk.js",
+    "main.js.map": "/spike-graphical-query-bar/static/js/main.b655160e.chunk.js.map",
+    "runtime-main.js": "/spike-graphical-query-bar/static/js/runtime-main.cc9a0140.js",
+    "runtime-main.js.map": "/spike-graphical-query-bar/static/js/runtime-main.cc9a0140.js.map",
+    "static/js/2.6cb6d0fe.chunk.js": "/spike-graphical-query-bar/static/js/2.6cb6d0fe.chunk.js",
+    "static/js/2.6cb6d0fe.chunk.js.map": "/spike-graphical-query-bar/static/js/2.6cb6d0fe.chunk.js.map",
+    "index.html": "/spike-graphical-query-bar/index.html",
+    "precache-manifest.135b4a62d0b811790a41e6bc9efa722c.js": "/spike-graphical-query-bar/precache-manifest.135b4a62d0b811790a41e6bc9efa722c.js",
+    "service-worker.js": "/spike-graphical-query-bar/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/spike-graphical-query-bar/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.6cb6d0fe.chunk.js.LICENSE.txt": "/spike-graphical-query-bar/static/js/2.6cb6d0fe.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/spike-graphical-query-bar/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cc9a0140.js",
+    "static/js/2.6cb6d0fe.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.b655160e.chunk.js"
+  ]
+}
