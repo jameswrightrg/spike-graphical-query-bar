@@ -1,0 +1,1 @@
+# spike-graphical-query-bar
