@@ -1,0 +1,100 @@
+.field {
+  width: 80%;
+  height: 56px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.custom-input {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  padding: 0px 16px;
+  border: none;
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  background-color: white;
+  color: #282828;
+  outline: none;
+  text-align: left;
+  vertical-align: middle;
+  margin: 2px;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.custom-input * {
+  margin: 5px;
+}
+
+.field input {
+  width: 100%;
+  height: 56px;
+  position: relative;
+  padding: 0px 16px;
+  border: none;
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  background-color: white;
+  color: #282828;
+  outline: none;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.andor-selector {
+  background-color: #dddddd;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+.table-pill {
+  background-color: #dddddd;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+.table-pill::before {
+  content: "🪑 ";
+}
+
+.column-name-pattern-pill {
+  background-color: #dddddd;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+.column-name-pattern-pill::before {
+  content: "🧣 ";
+}
+
+.tag-pill {
+  background-color: #ccccff;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+.tag-pill::before {
+  content: "🏷 ";
+}
+
+.brackets {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 10px;
+  padding: 2px 0px 6px 0px;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
