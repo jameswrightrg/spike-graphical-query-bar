@@ -11,9 +11,7 @@ type QueryBarInputElement =
   | { type: "AndOrSelector"; value: AndOr }
   | { type: "Brackets"; value: QueryBarInputElement[] }
   | { type: "Table"; value: string; valid: boolean }
-  | { type: "Pattern"; value: string }
   | { type: "Column"; value: string }
-  | { type: "Instance"; value: string }
   | { type: "Server"; value: string }
   | { type: "Database"; value: string }
   | { type: "Schema"; value: string }
@@ -39,21 +37,41 @@ function QueryBarInput({ value }: QueryBarInputProps) {
           </span>
         );
       case "Table":
-        return <span className="table-pill" title="Table">{element.value}</span>;
-      case "Instance":
+        return (
+          <span className="table-pill" title="Table">
+            {element.value}
+          </span>
+        );
       case "Server":
-        return <span className="instance-pill" title="Server/Instance">{element.value}</span>;
+        return (
+          <span className="instance-pill" title="Server/Instance">
+            {element.value}
+          </span>
+        );
       case "Database":
-        return <span className="database-pill" title="Database">{element.value}</span>;
+        return (
+          <span className="database-pill" title="Database">
+            {element.value}
+          </span>
+        );
       case "Schema":
-        return <span className="schema-pill" title="Schema">{element.value}</span>;
-      case "Pattern":
+        return (
+          <span className="schema-pill" title="Schema">
+            {element.value}
+          </span>
+        );
       case "Column":
         return (
-          <span className="column-name-pattern-pill" title="Column/Pattern">{element.value}</span>
+          <span className="column-name-pattern-pill" title="Column/Pattern">
+            {element.value}
+          </span>
         );
       case "Tag":
-        return <span className="tag-pill" title="Tag">{element.value}</span>;
+        return (
+          <span className="tag-pill" title="Tag">
+            {element.value}
+          </span>
+        );
       case "string":
         return <span title="String">{element.value}</span>;
       default:
@@ -84,12 +102,12 @@ function QueryBar() {
         return { type: "Schema", value: components[1] };
       case "server":
       case "instance":
-        return { type: "Instance", value: components[1] };
+        return { type: "Server", value: components[1] };
       case "database":
         return { type: "Database", value: components[1] };
       case "pattern":
       case "column":
-        return { type: "Pattern", value: components[1] };
+        return { type: "Column", value: components[1] };
       case "tag":
         return { type: "Tag", value: components[1] };
       default:
