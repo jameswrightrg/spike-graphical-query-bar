@@ -38,37 +38,40 @@ function QueryBarInput({ value }: QueryBarInputProps) {
         );
       case "Table":
         return (
-          <span className="table-pill" title="Table">
+          <span className="table-pill pill" title="Table">
             {element.value}
           </span>
         );
       case "Server":
         return (
-          <span className="instance-pill" title="Server/Instance">
+          <span className="instance-pill pill" title="Server/Instance">
             {element.value}
           </span>
         );
       case "Database":
         return (
-          <span className="database-pill" title="Database">
+          <span className="database-pill pill" title="Database">
             {element.value}
           </span>
         );
       case "Schema":
         return (
-          <span className="schema-pill" title="Schema">
+          <span className="schema-pill pill" title="Schema">
             {element.value}
           </span>
         );
       case "Column":
         return (
-          <span className="column-name-pattern-pill" title="Column/Pattern">
+          <span
+            className="column-name-pattern-pill pill"
+            title="Column/Pattern"
+          >
             {element.value}
           </span>
         );
       case "Tag":
         return (
-          <span className="tag-pill" title="Tag">
+          <span className="tag-pill pill" title="Tag">
             {element.value}
           </span>
         );
