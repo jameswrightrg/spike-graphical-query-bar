@@ -12,6 +12,11 @@ type QueryBarInputElement =
   | { type: "Brackets"; value: QueryBarInputElement[] }
   | { type: "Table"; value: string; valid: boolean }
   | { type: "Pattern"; value: string }
+  | { type: "Column"; value: string }
+  | { type: "Instance"; value: string }
+  | { type: "Server"; value: string }
+  | { type: "Database"; value: string }
+  | { type: "Schema"; value: string }
   | { type: "Tag"; value: string }
   | { type: "string"; value: string };
 
@@ -34,15 +39,23 @@ function QueryBarInput({ value }: QueryBarInputProps) {
           </span>
         );
       case "Table":
-        return <span className="table-pill">{element.value}</span>;
+        return <span className="table-pill" title="Table">{element.value}</span>;
+      case "Instance":
+      case "Server":
+        return <span className="instance-pill" title="Server/Instance">{element.value}</span>;
+      case "Database":
+        return <span className="database-pill" title="Database">{element.value}</span>;
+      case "Schema":
+        return <span className="schema-pill" title="Schema">{element.value}</span>;
       case "Pattern":
+      case "Column":
         return (
-          <span className="column-name-pattern-pill">{element.value}</span>
+          <span className="column-name-pattern-pill" title="Column/Pattern">{element.value}</span>
         );
       case "Tag":
-        return <span className="tag-pill">{element.value}</span>;
+        return <span className="tag-pill" title="Tag">{element.value}</span>;
       case "string":
-        return <span>{element.value}</span>;
+        return <span title="String">{element.value}</span>;
       default:
         return <span />;
     }
@@ -54,7 +67,7 @@ function QueryBarInput({ value }: QueryBarInputProps) {
 
 function QueryBar() {
   const [query, setQuery] = useState<string>(
-    "(table:Customer.Details AND pattern:%name%) or pattern:%customername% or tag:Name"
+    "(instance:instances.spawn.cc% AND database:Sales% AND schema:CUST% AND table:Details AND column:%name%) or column:%customername% or tag:Name"
   );
 
   const toQueryBarElement = (element: string): QueryBarInputElement => {
@@ -67,7 +80,15 @@ function QueryBar() {
         return { type: "AndOrSelector", value: AndOr.Or };
       case "table":
         return { type: "Table", value: components[1], valid: true };
+      case "schema":
+        return { type: "Schema", value: components[1] };
+      case "server":
+      case "instance":
+        return { type: "Instance", value: components[1] };
+      case "database":
+        return { type: "Database", value: components[1] };
       case "pattern":
+      case "column":
         return { type: "Pattern", value: components[1] };
       case "tag":
         return { type: "Tag", value: components[1] };

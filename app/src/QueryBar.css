@@ -65,6 +65,39 @@
   content: "🪑 ";
 }
 
+.instance-pill {
+  background-color: #dddddd;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+.instance-pill::before {
+  content: "🎁 ";
+}
+
+.database-pill {
+  background-color: #dddddd;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+.database-pill::before {
+  content: "🎀 ";
+}
+
+.schema-pill {
+  background-color: #dddddd;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+.schema-pill::before {
+  content: "🎫 ";
+}
+
 .column-name-pattern-pill {
   background-color: #dddddd;
   border-radius: 4px;
